@@ -1,0 +1,20 @@
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&subset=hebrew');
+$skinLogo: image-url("logo_aa.png") no-repeat 0px 0px;
+
+$skinActiveColor: #eb5437;
+$skinHeaderBck: #000;
+$panelHeaderBck: #000;
+@import "active_skin";
+
+
+@import "font-awesome";
+@import "active_admin_datetimepicker";
+
+#header 	h1.site_title{
+	background-size: 40px;
+    background-color: #000;
+    background-position: center;
+}

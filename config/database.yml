@@ -1,0 +1,14 @@
+development:
+  database: lucille-dev
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  password: kofkof12
+  username: postgres
+  pool: 50
+
+staging:
+  pool: <%= ENV['DB_POOL'] || ENV['RAILS_MAX_THREADS'] || 50 %>
+
+production:
+  pool: <%= ENV['DB_POOL'] || ENV['RAILS_MAX_THREADS'] || 50 %>
