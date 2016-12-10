@@ -10,5 +10,5 @@
 
 class Subscription < ActiveRecord::Base
 	validates :email, presence: true
-	validates :email, format: { with: /.+@.+\..+/i }, uniqueness: false, allow_blank: false
+	validates :email, format: { with: /.+@.+\..+/i }, allow_blank: false
 end

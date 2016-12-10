@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root to: 'static_pages#index'
   post '/contact', to: 'static_pages#send_contact'
+  resource :subscriptions do
+  end
 end

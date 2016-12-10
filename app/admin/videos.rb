@@ -5,7 +5,8 @@ ActiveAdmin.register Video do
 	filter :title
 
 	index do
-		column :id
+		selectable_column
+  		id_column
 		column :title
 		column :youtube_link do |instance|
 			("<iframe width='200' height='200' src=" + instance.youtube_link + "?rel=0&amp;controls=0&amp;showinfo=0 frameborder='0' allowfullscreen></iframe>").html_safe

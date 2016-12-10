@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="sec clearfix">
+		<div id="events">
+			<% if @events.present?%>
+				<%@events.each do |e|%>
+					<div class="col-sm-4 text-center">
+						<div class="title"><%="#{e.date.strftime('%d.%m')} #{e.title}"%></div>
+						<%if e.link.present?%>
+							<a href="<%=e.link%>">&lt;&lt; GET TICKETS &gt;&gt;</a>
+						<%end%>
+					</div>
+				<%end%>
+			<%end%>
+		</div>
+	</div>
+	<div class="sec text-center clearfix" id="about">
+		<h3 class="title">
+			about
+		</h3>
+		<div class="text">
+			Lucille Crew is an international Groove collective, fusing elements of Hiphop, Funk & Soul.
+			Since formed by producer Izzy (Isgav Dotan) and Drummer Yossi Adi, the crew has been on a nonstop
+			quest of music recording and live shows around the globe.<br>
+			Lucille Crew's next album is expected in Spring 2017, after which the band will go on a European tour.
+		</div>
+	</div>
+	<div class="sec text-center clearfix" id="gallery">
+		<h3 class="title">
+			gallery
+		</h3>
+	</div>
+	<div class="sec text-center clearfix" id="shop">
+		<h3 class="title">
+			shop
+		</h3>
+	</div>
+	<div class="sec text-center clearfix" id="contact">
+		<h3 class="title">
+			contact
+		</h3>
+	</div>
+	
+</div>

@@ -15,6 +15,12 @@
             <li><a href="#GALLERY">GALLERY</a></li>
             <li><a href="#SHOP">SHOP</a></li>
             <li><a href="#contact">CONTACT</a></li>
+            <li id="subscribe">
+              <%=form_for Subscription.new , method: 'POST', validate:true , remote: true do |f|%>
+                <%=f.email_field :email, class: 'form-control' %>
+                <%=submit_tag 'SUBSCRIBE', class: 'btn btn-black'%>
+              <%end%>
+            </li>
           </ul>
          
         </div><!--/.nav-collapse -->

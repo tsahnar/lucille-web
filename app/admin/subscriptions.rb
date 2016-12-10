@@ -4,7 +4,8 @@ ActiveAdmin.register Subscription do
 
 	filter :email
 	index do
-		column :id
+		selectable_column
+  		id_column
 		column :email
 		column :updated_at
 		column :created_at

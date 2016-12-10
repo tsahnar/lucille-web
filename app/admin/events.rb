@@ -5,7 +5,8 @@ ActiveAdmin.register Event do
 	filter :title
 
 	index do
-		column :id
+		selectable_column
+  		id_column
 		column :title
 		column :date
 		column :link
