@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	  <title>Exelot</title>
+	  <meta name="description" content="Exelot" >
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 
+
+	  <style>
+		/* ------------------------------------- 
+				GLOBAL 
+		------------------------------------- */
+		* { 
+			margin:0;
+			padding:0;
+			font-family: "arial"; 
+			font-size: 100%;
+			line-height: 1.6;
+		}
+		img { 
+			max-width: 100%; 
+		}
+		body {
+			-webkit-font-smoothing:antialiased; 
+			-webkit-text-size-adjust:none; 
+			width: 100%!important; 
+			height: 100%;
+			
+			margin: 0;
+			padding: 0;
+		}
+		/* ------------------------------------- 
+				ELEMENTS 
+		------------------------------------- */
+		a { 
+			color: #348eda;
+		}
+		/* ------------------------------------- 
+				TYPOGRAPHY 
+		------------------------------------- */
+		h1,h2,h3{
+			font-family: "Lucida Sans"; line-height: 1.1; margin-bottom:15px; color:#000;
+			margin: 40px 0 10px;
+			line-height: 1.2;
+			font-weight:200; 
+		}
+		p, ul { 
+			margin-bottom: 10px; 
+			font-weight: normal; 
+			font-size:14px;
+		}
+		ul li {
+			margin-left:5px;
+			list-style-position: inside;
+		}
+		/* --------------------------------------------------- 
+				RESPONSIVENESS
+				Nuke it from orbit. It's the only way to be sure. 
+		------------------------------------------------------ */
+		/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+		.container {
+			display:block!important;
+			max-width:600px!important;
+			margin:0 auto!important; /* makes it centered */
+			clear:both!important;
+		}
+		/* This should also be a block element, so that it will fill 100% of the .container */
+		.content {
+			padding:20px;
+			max-width:600px;
+			margin:0 auto;
+			display:block; 
+		}
+		</style>
+	</head>
+
+	<body >
+		<div style="background: black; height:60px">
+			<div style="text-align:center;  padding-top: 5px;">
+				<img src="<%=image_url 'logo.png'%>" style="width:48px " />
+			</div>
+			
+		</div>
+		<br>
+		<table style='width: 100%; padding: 20px;' >
+			<tr>
+				<td></td>
+				<td class="container">
+					<!-- content -->
+					<div class="content">
+							<div style="direction:ltr; font-size:16px; text-align: center;">
+							<div style="font-weight:bold; font-size:20px; color: black; padding-bottom:10px;">
+								Thank you for subscribing to our newsletter!
+							</div>
+							  <div>
+							 	Thank you for subscribing to our newsletter! 
+								We promise not to spam you! (:
+								Just keep you updated about what's good and new with us.
+							 </div>
+							 <div >
+								Much Love! 
+							 </div>
+							 <div >
+							 	Lucille Crew
+							 </div>
+							 <a href="http://localhost:3000/unsubscribe?email=<%=@email%>" style="font-size: 10px; color:black; margin-top: 20px; display: block">unsubscribe</a>
+						</div>
+					</div>		
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+
+

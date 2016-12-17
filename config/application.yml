@@ -1,0 +1,18 @@
+# encoding: utf-8
+
+defaults: &defaults
+  # AWS S3
+  aws_s3_region: 'eu-west-1'
+  aws_s3_bucket: 'lucille'
+
+
+
+development:
+  <<: *defaults
+
+  # AWS S3
+  aws_s3_bucket: 'lucille'
+
+
+production:
+  <<: *defaults

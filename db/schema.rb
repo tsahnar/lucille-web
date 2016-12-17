@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209104830) do
+ActiveRecord::Schema.define(version: 20161217172725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,10 +75,18 @@ ActiveRecord::Schema.define(version: 20161209104830) do
 
   add_index "old_passwords", ["password_archivable_type", "password_archivable_id"], name: "index_password_archivable", using: :btree
 
+  create_table "pictures", force: :cascade do |t|
+    t.string   "image"
+    t.integer  "sort_order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "subscriptions", force: :cascade do |t|
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "send_newsletter", default: true
   end
 
   create_table "videos", force: :cascade do |t|
@@ -87,6 +95,7 @@ ActiveRecord::Schema.define(version: 20161209104830) do
     t.integer  "sort_order"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "thumbnail"
   end
 
 end

@@ -1,6 +1,21 @@
 <div class="container">
-	<div class="sec clearfix">
+	<div class="sec clearfix" id="main">
+		<div id="social">
+			<div class="icon-wrap">
+				<a href="https://www.facebook.com/LucilleCrew" target="_blank"><%=image_tag 'fb.png'%></a>
+			</div>
+			<div class="icon-wrap">
+				<a href="https://www.instagram.com/lucillecrew/" target="_blank"><%=image_tag 'insta.png'%></a>
+			</div>
+			<div class="icon-wrap">
+				<a href="https://www.youtube.com/user/Lucillesmokinsoul" target="_blank"><%=image_tag 'youtube.png'%></a>
+			</div>
+			<div class="icon-wrap">
+				<a href="https://twitter.com/Lucillecrew" target="_blank"><%=image_tag 'twitter.png'%></a>
+			</div>
+		</div>
 		<div id="events">
+			<%=image_tag 'lucille_main.png', id: "lucille_main"%>
 			<% if @events.present?%>
 				<%@events.each do |e|%>
 					<div class="col-sm-4 text-center">
@@ -28,33 +43,47 @@
 		<h3 class="title">
 			gallery
 		</h3>
+		<div id="videos" class="clearfix row">
+			<%@videos.each do |v|%>
+				<div class='col-sm-4 col-xs-12'>
+					<a href="<%=v.youtube_link%>" data-lity>
+						<div>
+							<%=image_tag v.thumbnail_url%>
+							<div class=" text-left title">
+								 <%=v.title%>
+							</div>
+						</div>
+					</a>
+				</div>
+			<%end%>
+		</div>
 		<div class="grid-wrap clearfix">
-			<div class="col-sm-4 item">
-				
-				<div  class="bg-img" style="background-image: url('<%=image_url 'pic1.png'%>')">
-					
-				</div>
-			</div>
-			<div class="col-sm-4  item two-row clearfix">
-				<div class="col-xs-12 item">
-					<div class="bg-img half-size" style="background-image: url('<%=image_url 'pic2.png'%>')">
-					
+		<%if @pictures.present?%>
+				<div class="col-sm-4 item">
+					<div  class="bg-img" style="background-image:url('<%=@pictures[0].image_url%>')">
 					</div>
 				</div>
-				<div class="col-xs-12 item">
-					<div  class="bg-img half-size" style="background-image: url('<%=image_url 'pic3.png'%>')">
-					
+				<div class="col-sm-4  item two-row clearfix">
+					<div class="col-xs-12 item">
+						<div class="bg-img half-size" style="background-image:url('<%=@pictures[1].image_url%>')">
+						
+						</div>
+					</div>
+					<div class="col-xs-12 item">
+						<div  class="bg-img half-size" style="background-image:url('<%=@pictures[2].image_url%>')">
+						
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-sm-4 item">
-				<div   class="bg-img" style="background-image: url('<%=image_url 'pic4.png'%>')">
-					
+				<div class="col-sm-4 item">
+					<div   class="bg-img" style="background-image:url('<%=@pictures[3].image_url%>')">
+						
+					</div>
 				</div>
-			</div>
+			<%end%>
 		</div>
 		<div  class="col-xs-12 item">
-			<div   class="bg-img big" style="background-image: url('<%=image_url 'pic5.png'%>')"></div>
+			<div   class="bg-img big" style="background-image:url('<%=@pictures[4].image_url%>')"></div>
 		</div>
 	</div>
 	<div class="sec text-center clearfix" id="shop">
@@ -110,8 +139,20 @@
 			<div class="form-group">
 				<%=f.text_area :message, placeholder: 'Message', class: 'form-control'%>
 			</div>
+
 			<%=submit_tag 'Submit', class: 'btn btn-black'%>
 		<%end%>
 	</div>
-	
 </div>
+<script type="text/javascript">
+	// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+   $('a.page-scroll').bind('click', function(event) {
+       var $anchor = $(this);
+       $('html, body').stop().animate({
+           scrollTop: $($anchor.attr('href')).offset().top - 100
+       }, 1200, 'easeInOutExpo');
+       event.preventDefault();
+   });
+});
+</script>

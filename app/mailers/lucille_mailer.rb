@@ -1,0 +1,15 @@
+class LucilleMailer < ActionMailer::Base
+  default from: "LucilleCrew <no-reply@lucillecrew.com>"
+
+
+  def contact(email, info)
+  	 @info = info
+  	 mail to: "info.lucillecrew@gmail.com", from: email,  subject: 'Contact Mail'
+  end
+
+  def subscription_mail(email)
+    @email = email
+      mail to: email, from: email,  subject: 'Thanks for subscribing'
+  end
+ 
+end
