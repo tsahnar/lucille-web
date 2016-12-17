@@ -59,31 +59,32 @@
 			<%end%>
 		<%end%>
 		</div>
-		<div class="grid-wrap clearfix">
 		<%if @pictures.present?%>
-				<div class="col-sm-4 item">
-					<div  class="bg-img" style="background-image:url('<%=@pictures[0].image_url%>')">
-					</div>
-				</div>
-				<div class="col-sm-4  item two-row clearfix">
-					<div class="col-xs-12 item">
-						<div class="bg-img half-size" style="background-image:url('<%=@pictures[1].image_url%>')">
-						
+			<div class="grid-wrap clearfix">
+			
+					<div class="col-sm-4 item">
+						<div  class="bg-img" style="background-image:url('<%=@pictures[0].image_url%>')">
 						</div>
 					</div>
-					<div class="col-xs-12 item">
-						<div  class="bg-img half-size" style="background-image:url('<%=@pictures[2].image_url%>')">
-						
+					<div class="col-sm-4  item two-row clearfix">
+						<div class="col-xs-12 item">
+							<div class="bg-img half-size" style="background-image:url('<%=@pictures[1].image_url%>')">
+							
+							</div>
+						</div>
+						<div class="col-xs-12 item">
+							<div  class="bg-img half-size" style="background-image:url('<%=@pictures[2].image_url%>')">
+							
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-4 item">
-					<div   class="bg-img" style="background-image:url('<%=@pictures[3].image_url%>')">
-						
+					<div class="col-sm-4 item">
+						<div   class="bg-img" style="background-image:url('<%=@pictures[3].image_url%>')">
+							
+						</div>
 					</div>
-				</div>
-			<%end%>
-		</div>
+			</div>
+		<%end%>
 		<div  class="col-xs-12 item">
 			<div   class="bg-img big" style="background-image:url('<%=@pictures[4].image_url%>')"></div>
 		</div>
