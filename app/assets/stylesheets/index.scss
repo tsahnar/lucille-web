@@ -106,6 +106,20 @@ footer{
 	background: #000;
     height: 60px;
 }
+a.navbar-brand{
+	border: 3px solid #fff;
+    border-radius: 100%;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px;
+    padding-top: 13px;
+    font-size: 21px;
+    letter-spacing: -1px;
+}
+.navbar-default .navbar-brand{
+	color: #fff;
+}
+
 .navbar-default{
 	background: #000;
 	padding-bottom: 20px;
@@ -195,6 +209,58 @@ border:none;
 			display: block;
 		}
 	}
+	#shop{
+		.text{
+			min-width: 100px;
+		
+			font-weight: bold;
+			padding-top:10px;
+			line-height: 1.6;
+		}
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	#gallery{
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+		.item{
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+		.bg-img{
+			background-size: cover;
+			background-position: center center;
+
+		}
+		.bg-img.big{
+			height: 400px;
+			margin-top:10px;
+		}
+		.grid-wrap{
+			height: 400px;
+			> div{
+				height: 100%;
+				.bg-img{
+					height: 100%;
+				}
+				.col-xs-12{
+					height: 50%;
+				}
+			}
+			
+			
+			
+		}
+		.two-row{
+			> div:last-child{
+				padding-top:10px;
+			}
+		}
+	}
 	#contact{
 		form{
 			max-width: 600px;
@@ -207,8 +273,6 @@ border:none;
 			float:right;
 			padding: 10px 20%;
 		}
-		
-
 	}
 }
 
@@ -222,5 +286,80 @@ border:none;
 				background:none;
 			}
 		}
+	}
+	a.navbar-brand {
+	        border: 3px solid #fff;
+    border-radius: 100%;
+    font-weight: bold;
+    color: #fff;
+    padding: 4px;
+    padding-top: 5px;
+    font-size: 17px;
+    letter-spacing: -1px;
+    height: 35px;
+    width: 35px;
+    margin-top: 7px;
+    margin-left: 15px;	}
+
+	#pageWrap{
+		#shop{
+			.text{
+				font-size: 12px;
+				padding-top: 5px;
+				padding-bottom: 20px;
+			}
+		}
+		#gallery{
+			.bg-img{
+				background-position: center 0;
+			}
+			.grid-wrap{
+				height: auto;
+				> div{
+					height: 300px;
+					.col-xs-12{
+						height: 100%;
+					}
+				}
+
+			}
+		}
+	}
+}
+@media (min-width: 1200px){
+	.container {
+		width: 1024px;
+	}
+}
+@media only screen and (max-width: 420px) {
+	 #pageWrap{
+	 	#shop{
+	 		.col-xs-4{
+	 			width: 100%;
+	 		}
+	 	}
+	 }
+}
+
+
+.img-wrap:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
 	}
 }
