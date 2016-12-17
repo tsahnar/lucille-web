@@ -44,6 +44,7 @@
 			gallery
 		</h3>
 		<div id="videos" class="clearfix row">
+		<%if @videos.present?%>
 			<%@videos.each do |v|%>
 				<div class='col-sm-4 col-xs-12'>
 					<a href="<%=v.youtube_link%>" data-lity>
@@ -56,6 +57,7 @@
 					</a>
 				</div>
 			<%end%>
+		<%end%>
 		</div>
 		<div class="grid-wrap clearfix">
 		<%if @pictures.present?%>
