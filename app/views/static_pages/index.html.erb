@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="sec clearfix" id="main">
-		<div id="social">
+		<div id="social" class="hidden-xs">
 			<div class="icon-wrap">
 				<a href="https://www.facebook.com/LucilleCrew" target="_blank"><%=image_tag 'fb.png'%></a>
 			</div>
@@ -60,7 +60,7 @@
 		<%end%>
 		</div>
 		<%if @pictures.present?%>
-			<div class="grid-wrap clearfix">
+			<div class="grid-wrap hidden-xs clearfix">
 			
 					<div class="col-sm-4 item">
 						<div  class="bg-img" style="background-image:url('<%=@pictures[0].image_url%>')">
@@ -85,8 +85,15 @@
 					</div>
 			</div>
 
-			<div  class="col-xs-12 item">
+			<div  class="col-xs-12 hidden-xs item">
 				<div   class="bg-img big" style="background-image:url('<%=@pictures[4].image_url%>')"></div>
+			</div>
+			<div id="mobile-gallery">
+				<%@pictures.each do |p|%>
+					<div>
+						<%=image_tag p.image_url%>
+					</div>
+				<%end%>
 			</div>
 		<%end%>
 	</div>
@@ -158,5 +165,15 @@ $(function() {
        }, 1200, 'easeInOutExpo');
        event.preventDefault();
    });
+   $('#mobile-gallery').slick({
+	  dots: false,
+	  infinite: true,
+	  speed: 300,
+	  slidesToShow: 1,
+	  centerMode: true,
+	  variableWidth: false,
+	   arrows: false,
+	   centerPadding: '40px',
+	});
 });
 </script>
