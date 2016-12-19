@@ -104,6 +104,12 @@ textarea.form-control{
 	height: 100px;
 	
 }
+.navbar-toggle{
+	margin-right: 5px;
+	.icon-bar{
+		background-color: #fff !important;
+	}
+}
 footer{
 	background: #000;
     height: 60px;
@@ -233,7 +239,7 @@ footer{
 	   margin:0 auto;
 	}
 	#events{
-		font-family: 'Impact';
+		font-family: 'Impact' , "HelveticaNeue-CondensedBold", "Helvetica Neue";
 		font-weight: bold;
 		.title{
 			font-size: 24px;
@@ -426,7 +432,15 @@ nav{
 		width: 60.9%;
 	}
 	#subscribe .btn{
-		    top: -0.01em;
+		    top: -0.1em;
+	}
+	#subscribe{
+		.field_with_errors{
+			width: 61%;
+		}
+		.field_with_errors + .btn{
+			top:0em;
+		}
 	}
 	footer{
 		p{

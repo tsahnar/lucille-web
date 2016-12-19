@@ -160,6 +160,7 @@
 $(function() {
    $('a.page-scroll').bind('click', function(event) {
        var $anchor = $(this);
+        $('.navbar-collapse').collapse('hide');
        $('html, body').stop().animate({
            scrollTop: $($anchor.attr('href')).offset().top - 100
        }, 1200, 'easeInOutExpo');
@@ -175,5 +176,9 @@ $(function() {
 	   arrows: false,
 	   centerPadding: '40px',
 	});
+   $('.navbar-collapse').on('shown.bs.collapse', function () {
+   		$('#new_subscription').enableClientSideValidations();
+   });
 });
+   
 </script>
