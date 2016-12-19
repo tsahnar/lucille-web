@@ -162,7 +162,7 @@ $(function() {
        var $anchor = $(this);
         $('.navbar-collapse').collapse('hide');
        $('html, body').stop().animate({
-           scrollTop: $($anchor.attr('href')).offset().top - 100
+           scrollTop: $($anchor.attr('href')).offset().top - $('.navbar-header').height()
        }, 1200, 'easeInOutExpo');
        event.preventDefault();
    });
