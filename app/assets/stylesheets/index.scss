@@ -441,6 +441,11 @@ nav{
 		.field_with_errors + .btn{
 			top:0em;
 		}
+		span{
+			display: block;
+			right:auto;
+			left:0px;
+		}
 	}
 	footer{
 		p{
@@ -471,7 +476,7 @@ nav{
 }
 
 
-.img-wrap:hover img {
+.img-wrap:hover img , #videos > div:hover{
 	opacity: 1;
 	-webkit-animation: flash 1.5s;
 	animation: flash 1.5s;
