@@ -4,7 +4,7 @@ class LucilleMailer < ActionMailer::Base
 
   def contact(email, info)
   	 @info = info
-  	 mail to: "info.lucillecrew@gmail.com", from: email,  subject: 'Contact Mail'
+  	 mail to: "info@lucillecrew.com", from: email,  subject: 'Contact Mail'
   end
 
   def subscription_mail(email)
