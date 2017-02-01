@@ -21,7 +21,7 @@
 					<div class="col-sm-4 text-center">
 						<div class="title"><%="#{e.date.strftime('%d.%m')} #{e.title}"%></div>
 						<%if e.link.present?%>
-							<a href="<%=e.link%>">&lt;&lt; GET TICKETS &gt;&gt;</a>
+							<a target="_blank" href="<%=e.link%>">&lt;&lt; GET TICKETS &gt;&gt;</a>
 						<%end%>
 					</div>
 				<%end%>

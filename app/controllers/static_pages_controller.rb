@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
 	def index
-		@events = Event.all.order(:date).limit(3)
+		@events = Event.where('date >= ?' , Time.zone.now.midnight).order(:date).limit(3)
 		@videos = Video.all.order(:sort_order)
 		@pictures = Picture.all.order(:sort_order)
 	end
@@ -10,7 +10,7 @@ class StaticPagesController < ApplicationController
 
 			 @msg = {class: 'success' , text: I18n.t('contact_success')}
 			 puts "FFF"
-			 # LucilleMailer.contact(params[:contact][:email], {name: params[:contact][:name], message: params[:contact][:message]}).deliver_now
+			 LucilleMailer.contact(params[:contact][:email], {name: params[:contact][:name], message: params[:contact][:message]}).deliver_now
 		else
 			 @msg = {class: 'error' , text: I18n.t('errors.server.general')}
 		end
