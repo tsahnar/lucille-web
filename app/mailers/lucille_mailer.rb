@@ -9,7 +9,7 @@ class LucilleMailer < ActionMailer::Base
 
   def subscription_mail(email)
     @email = email
-      mail to: email, from: email,  subject: 'Thanks for subscribing'
+      mail to: email, subject: 'Thanks for subscribing'
   end
  
 end
